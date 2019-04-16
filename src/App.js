@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Router, Route, Link} from "react-router-dom"
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state={}
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,9 +24,21 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
+        <div className="aside">
+          <ul className="asideUl">
+            {/* <li><Link to="">我是侧边栏1</Link></li>- */}
+            <li onclick={()=>{this.goAbout()}}><a>我是侧边栏2</a></li>
+            <li><a>我是侧边栏3</a></li>
+          </ul>
+        </div>
+        <header className="header">我是头部！</header>
       </div>
     );
+  }
+
+  goAbout=()=>{
+    this.props.history.push("/about")
   }
 }
 

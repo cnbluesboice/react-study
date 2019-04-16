@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +30,33 @@
   to {
     transform: rotate(360deg);
   }
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+.aside{
+  width: 20%;
+  height: 600px;
+  background-color: pink;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.aside>.asideUl>li {
+  list-style: none;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.header {
+  width: 90%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  background-color: #ccc;
+  margin-left: 10%;
+
 }
